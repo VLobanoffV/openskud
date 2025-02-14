@@ -7,9 +7,13 @@ Open source working time monitoring system based on RFID cards for warehouse.
 devices:
     - '/dev/input/by-id/usb-Sycreader_RFID_Technology_Co.__Ltd_SYC_ID_IC_USB_Reader_08FF20140315-event-kbd:/dev/input/by-id/usb-Sycreader_RFID_Technology_Co.__Ltd_SYC_ID_IC_USB_Reader_08FF20140315-event-kbd'
 ```
-
+  
 >Path to your sqlite3 database:
 ``` 
 volumes:
     - '/opt/openskud/skud.db:/app/skud.db'
+```
+>Once you have edited docker-compose.yml you can download the required image and run the container:
+```
+docker-compose up -d
 ```
