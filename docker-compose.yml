@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+    bio_visits:
+        image: 'dahoonpao/openskud:latest'
+        devices:
+            - '/dev/input/by-id/usb-Sycreader_RFID_Technology_Co.__Ltd_SYC_ID_IC_USB_Reader_08FF20140315-event-kbd:/dev/input/by-id/usb-Sycreader_RFID_Technology_Co.__Ltd_SYC_ID_IC_USB_Reader_08FF20140315-event-kbd'
+        ports:
+            - '80:80'
+        volumes:
+            - '/opt/openskud/skud.db:/app/skud.db'
+        container_name: openskud
+        restart: unless-stopped
